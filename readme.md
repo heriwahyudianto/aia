@@ -32,7 +32,8 @@
 4. Another bonus point if you implement paging on the app. Also, click on the image instance should lead to its own page which has
    the image details. If you can, put webview to flicker to open the flickr link directly, if any.
 5. Optional one : Save the instance to favorite. Implement this only if you already did the others.
-6. Expected result is an APK or adhoc IPA, and deployment is optional. If you can deploy to public/private distribution, the better.
+6. Expected result is an APK or adhoc IPA. Make sure to support Android 8 and iOS 12/13 and iPad OS 12/13 too.
+   Deployment is optional. If you can deploy to public/private distribution, the better.
    If you can't deploy your app, it's okay! Just make sure that you can demo it to us when we do the interview.
 
 ### So, what should you do?
