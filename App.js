@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, FlatList, Text, View } from 'react-native';
+import { ActivityIndicator, Text, View } from 'react-native';
 import { parseString } from "react-native-xml2js";
 
 export default App = () => {
@@ -11,7 +11,6 @@ export default App = () => {
       .then((response) => response.text())
       .then((json) => {
         parseString(json, function (err, result) {
-          console.log(result.feed.entry);
           setData(result.feed.entry);
         });
       })
@@ -27,11 +26,14 @@ export default App = () => {
     );
   } else {
     var flickrs = [];
-    for (let index = 0; index < 4; index++) {
+    for (let index = 0; index < data.length; index++) {
       flickrs.push(
-        <View key = {index}>
-          <View><Text>{data[index].author[0].name[0]}</Text></View>
-        </View>);
+        <View key={index}>
+          <View>
+            <Text>{data[index].author[0].name[0]}</Text>
+          </View>
+        </View>
+      );
     }
     return (
       <View style={{ flex: 1, padding: 24 }}>
